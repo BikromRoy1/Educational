@@ -1,0 +1,960 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/710c814132.js" crossorigin="anonymous"></script>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="public/css/style.css">
+
+</head>
+
+<body>
+
+
+  <!--=== Navbar section === -->
+  <nav class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-800">
+    <div class="container flex flex-wrap justify-between items-center mx-auto">
+      <a href="https://flowbite.com" class="flex items-center">
+        <img src="img/2x_logo.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
+      </a>
+      <div class="flex md:order-2">
+        <button type="button" data-collapse-toggle="mobile-menu-3" aria-controls="mobile-menu-3" aria-expanded="false"
+          class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div class="hidden relative md:block">
+          <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <input type="text" id="search-navbar"
+            class="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-green-500 sm:text-sm focus:border-green-500 focus:border-green-500 dark:bg-gray-700 green:border-green-500 dark:placeholder-gray-400 dark:text-white dark:focus:border-green-500 dark:focus:border-green-500"
+            placeholder="Search...">
+        </div>
+        <button data-collapse-toggle="mobile-menu-3" type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="mobile-menu-3" aria-expanded="false">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-3">
+        <div class="relative mt-3 md:hidden">
+          <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <input type="text" id="search-navbar"
+            class="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-green-500 sm:text-sm focus:ring-blue-500 focus:border-green-500 dark:bg-gray-700 dark:border-green-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-green-500"
+            placeholder="Search...">
+        </div>
+        <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+          <li>
+            <a href="#"
+              class="block py-2 pr-4 pl-3 text-base font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-green-600 md:p-0 dark:text-white"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pr-4 pl-3 text-base font-bold text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-600 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pr-4 text-base font-bold pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-600 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+          </li>
+          <li>
+            <a href=""
+              class="text-base font-bold block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-green-600 md:hover:bg-transparent md:border-0 md:hover:text-green-600 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Courses</a>
+          </li>
+          <li>
+            <a href=""
+              class=" text-base font-bold block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-green-600 md:hover:bg-transparent md:border-0 md:hover:text-green-600 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Courses</a>
+          </li>
+          <li>
+            <a href=""
+              class=" text-base font-bold block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-green-600 md:hover:bg-transparent md:border-0 md:hover:text-green-600 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Courses</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> <!-- end navbar html -->
+
+  <!--=== Header section === -->
+  <header class="" id="header">
+    <div class="container mx-auto gap-20 columns-2">
+      <div class="left-side-header pt-36 ">
+        <div class="small-title">
+          <p class="text-sm uppercase text-green-600 tracking-wide font-semibold ">START TO NEW JOURNEY</p>
+          <h2 style="color:#072f60 ; line-height: 1.2;" class="text-5xl font-semibold mt-2.5">Experience a learning
+            platform that take you next level</h2>
+          <h4 style="line-height: 1.6;" class="max-w-sm text-base mt-7 mb-10 font-medium text-gray-500">World-class
+            training and development programs developed by top teachers
+          </h4>
+
+        </div>
+        <div class=" md:w-2/3 xl:w-auto mx-auto flex flex-col xl:items-stretch justify-between xl:flex-row">
+          <div class="w-10/12">
+            <div class="flex items-stretch">
+              <input
+                class="bg-gray-100 rounded-lg rounded-r-none dark:bg-gray-800 text-base leading-none text-gray-800 dark:text-white p-3 w-4/5 border border-transparent focus:outline-none focus:border-gray-500"
+                type="email" placeholder="Your Email" />
+              <button
+                class="w-32 ease-in-out duration-300 rounded-l-none bg-emerald-500 rounded text-base font-medium leading-none text-white p-3 uppercase focus:outline-none focus:ring-indigo-700">subscribe</button>
+            </div>
+          </div>
+        </div>
+        <p class="mt-6 text-base font-medium ">No credit card required. By <span class="text-green-500"><a
+              href="">clicking ‘Start a Free Trial’</a></span></p>
+      </div>
+      <div class="right-side-img pt-24">
+        <img src="img/QUR904.png" alt="man-image">
+      </div>
+    </div>
+  </header> <!-- end Header html -->
+
+  <!-- main boby section -->
+  <main>
+
+
+    <!--=== Happy clients sections ==== -->
+    <section class="happy-clients">
+      <div class="container mx-auto">
+        <div class="happy-client-item   gap-7 grid grid-cols-3">
+          <!-- item number 01 -->
+          <div class="happy-client-single-item  flex flex-wrap items-center mx-auto">
+            <div class="icons-logo">
+              <img class="w-20" width="144" height="148" src="img/icons/icon-2-dark.png" alt="icons">
+            </div>
+            <div class="client-text">
+              <h1 style="color: #072F60; font-size: 44px;" class="font-semibold">360+</h1>
+              <p class="font-normal leading-9 text-sm" style="color: #666666;">Hours of Learning</p>
+            </div>
+          </div>
+
+          <!-- item number 01 -->
+          <div class="happy-client-single-item flex flex-wrap justify-items-center items-center mx-auto">
+            <div class="icons-logo">
+              <img width="144" height="146" class="w-16" src="img/icons/icon-1-dark.png" alt="icons">
+            </div>
+            <div class="client-text">
+              <h1 style="color: #072F60; font-size: 44px;" class="font-semibold">1200+</h1>
+              <p class="font-normal leading-9 text-sm" style="color: #666666;">Enrolled Learners</p>
+            </div>
+          </div>
+
+          <!-- item number 01 -->
+          <div class="happy-client-single-item  flex flex-wrap justify-items-center items-center mx-auto">
+            <div class="icons-logo">
+              <img width="124" height="128" class="w-16" src="img/icons/icon-3-dark.png" alt="icons">
+            </div>
+            <div class="client-text">
+              <h1 style="color: #072F60; font-size: 44px;" class="font-semibold">250+</h1>
+              <p class="font-normal leading-9 text-sm" style="color: #666666;">Online Instructors</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+
+
+    <!--=== Learning Tutorials sections ==== -->
+    <section class="learning" id="learning">
+      <div class="container mx-auto">
+
+        <div class="accseor">
+          <div class="elementor-widget-container">
+            <div class="tpc-double_heading">
+              <h3 class="dbl__title-wrapper">
+                <span class="shape-bg ">
+                  <span style="background: #ffd24d;" class="shape__bg"></span>
+                </span>
+                <span class="dbl__title dbl-title_1">Top Rated Learning Tutorials</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-all gap-7 grid grid-cols-4">
+          <div class="course-container bg-white overflow-hidden rounded-md mb-2.5">
+            <div class="course__media relative">
+              <a href="" class="course__media-link block relative">
+                <img class="card-image" src="img/Learning/cooking.jpeg" alt="">
+              </a>
+              <div class="course__content--info">
+                <div class="course-top-meta">
+                  <div class="course-categories inline-block">
+                    <a href="#" class="font-semibold inline-block">Cooking</a>
+                  </div>
+                  <span class="price font-semibold">Free</span>
+                </div>
+                <h4 class="course-title mt-3 ">
+                  <a href="#" class="font-semibold">Absolute Beginners Cooking Course</a>
+                </h4>
+                <div class="tpc-course-author-name">
+                  <img class="rounded-full" src="img/Learning/cooking-man.jpg" alt="man-image">
+                  Tim Burton
+                </div>
+              </div>
+              <div class="course-content-meta">
+                <div class="course-meta-left">
+                  <span class="course-students">
+                    <i class="fa-solid fa-user"></i> 30
+                  </span>
+                  <span class="course-lessons">
+                    <i class="fa-solid fa-book"></i> 10
+                  </span>
+                </div>
+                <div class="course-meta-right">
+                  <div class="course-review flex">
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end item 04 -->
+
+          <div class="course-container bg-white overflow-hidden rounded-md mb-2.5">
+            <div class="course__media relative">
+              <a href="" class="course__media-link block relative">
+                <img class="card-image" src="img/Learning/bussnice.jpg" alt="">
+              </a>
+              <div class="course__content--info">
+                <div class="course-top-meta">
+                  <div class="course-categories inline-block">
+                    <a href="#" class="font-semibold inline-block">Business</a>
+                  </div>
+                  <span class="price font-semibold">$29.00</span>
+                </div>
+                <h4 class="course-title mt-3 ">
+                  <a href="#" class="font-semibold">Web Design Training with Elementor</a>
+                </h4>
+                <div class="tpc-course-author-name">
+                  <img class="rounded-full" src="img/Learning/man02.jpeg" alt="man-image">
+                  Devon Koss
+                </div>
+              </div>
+              <div class="course-content-meta">
+                <div class="course-meta-left">
+                  <span class="course-students">
+                    <i class="fa-solid fa-user"></i> 08
+                  </span>
+                  <span class="course-lessons">
+                    <i class="fa-solid fa-book"></i> 15
+                  </span>
+                </div>
+                <div class="course-meta-right">
+                  <div class="course-review flex">
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end item 04 -->
+
+          <div class="course-container bg-white overflow-hidden rounded-md mb-2.5">
+            <div class="course__media relative">
+              <a href="" class="course__media-link block relative">
+                <img class="card-image" src="img/Learning/cooking2.jpeg" alt="">
+              </a>
+              <div class="course__content--info">
+                <div class="course-top-meta">
+                  <div class="course-categories inline-block">
+                    <a href="#" class="font-semibold inline-block">Cooking</a>
+                  </div>
+                  <span class="price font-semibold">$39.00</span>
+                </div>
+                <h4 class="course-title mt-3 ">
+                  <a href="#" class="font-semibold">Basic Level Youth Health and Cooking</a>
+                </h4>
+                <div class="tpc-course-author-name">
+                  <img class="rounded-full" src="img/Learning/man03.jpg" alt="man-image">
+                  Fred Hyman
+                </div>
+              </div>
+              <div class="course-content-meta">
+                <div class="course-meta-left">
+                  <span class="course-students">
+                    <i class="fa-solid fa-user"></i> 50
+                  </span>
+                  <span class="course-lessons">
+                    <i class="fa-solid fa-book"></i> 05
+                  </span>
+                </div>
+                <div class="course-meta-right">
+                  <div class="course-review flex">
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end item 04 -->
+
+          <div class="course-container bg-white overflow-hidden rounded-md mb-2.5">
+            <div class="course__media relative">
+              <a href="" class="course__media-link block relative">
+                <img class="card-image" src="img/Learning/life-style.jpeg" alt="">
+              </a>
+              <div class="course__content--info">
+                <div class="course-top-meta">
+                  <div class="course-categories inline-block">
+                    <a href="#" class="font-semibold inline-block">Lifestyle</a>
+                  </div>
+                  <span class="price font-semibold">Free</span>
+                </div>
+                <h4 class="course-title mt-3 ">
+                  <a href="#" class="font-semibold">Drawing and Painting Course for Children</a>
+                </h4>
+                <div class="tpc-course-author-name">
+                  <img class="rounded-full" src="img/Learning/cooking-man.jpg" alt="man-image">
+                  Tim Burton
+                </div>
+              </div>
+              <div class="course-content-meta">
+                <div class="course-meta-left">
+                  <span class="course-students">
+                    <i class="fa-solid fa-user"></i> 60
+                  </span>
+                  <span class="course-lessons">
+                    <i class="fa-solid fa-book"></i> 18
+                  </span>
+                </div>
+                <div class="course-meta-right">
+                  <div class="course-review flex">
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="review-star"><i class="fa-solid fa-star"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end item 04 -->
+
+
+
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- course footers -->
+    <div class="container mx-auto pb-24	">
+      <div class="elementor-widget-container">
+        <div class="tpc-double-heading relative">
+          <h3 class="dbl-title-wrapper text-center">
+            <span class="dbl-title-1 font-semibold text-xl">23,000+ </span>
+            <span class="dbl-title-2 text-base font-normal">more skillful courses you can explore</span>
+          </h3>
+        </div>
+        <div class="elementor-button-wrapper text-center pt-9">
+          <a href="">Explore All Courses</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--===  enroll now sections ==== -->
+    <section class="enroll" id="enroll">
+      <div class="container mx-auto">
+        <div class="accseor">
+          <div class="elementor-widget-container">
+            <div class="tpc-double_heading">
+              <h3 class="dbl__title-wrapper">
+                <span class="shape-bg2 ">
+                  <span style="background: #ffd24d;" class="shape__bg"></span>
+                </span>
+                <span class="dbl__title dbl-title_1">Top categories you can enroll now</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="elementor-container grid grid-cols-3 gap-6">
+
+          <div class="elementor-column cursor-pointer">
+            <div class="single-cat-item text-left relative rounded-xl overflow-hidden">
+              <div class="items-image relative overflow-hidden">
+                <img class="object-cover" src="img/enrobel/enrol01.jpg" alt="enrobel">
+              </div>
+              <div class="items-cont flex items-center justify-between absolute left-0 w-full">
+                <div class="content-wrap">
+                  <a href="">
+                    <h3 class="course-cat text-white font-semibold">Web Design</h3>
+                  </a>
+                  <h4 class="total-course font-normal  text-white">10 Courses</h4>
+                </div>
+                <div class="icon-wrap">
+                  <a href="#"><i
+                      class="fa-solid fa-arrow-right text-white rounded-full text-center flex items-center justify-center"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end items 01 -->
+
+          <div class="elementor-column cursor-pointer">
+            <div class="single-cat-item text-left relative rounded-xl overflow-hidden">
+              <div class="items-image relative overflow-hidden">
+                <img class="object-cover" src="img/enrobel/POL035.jpg" alt="enrobel">
+              </div>
+              <div class="items-cont flex items-center justify-between absolute left-0 w-full">
+                <div class="content-wrap">
+                  <a href="">
+                    <h3 class="course-cat text-white font-semibold">UX/UI Design</h3>
+                  </a>
+                  <h4 class="total-course font-normal  text-white">15 Courses</h4>
+                </div>
+                <div class="icon-wrap">
+                  <a href="#"><i
+                      class="fa-solid fa-arrow-right text-white rounded-full text-center flex items-center justify-center"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end items 02 -->
+
+          <div class="elementor-column cursor-pointer">
+            <div class="single-cat-item text-left relative rounded-xl overflow-hidden">
+              <div class="items-image relative overflow-hidden">
+                <img class="object-cover" src="img/enrobel/MJKS424.jpg" alt="enrobel">
+              </div>
+              <div class="items-cont flex items-center justify-between absolute left-0 w-full">
+                <div class="content-wrap">
+                  <a href="">
+                    <h3 class="course-cat text-white font-semibold">Graphic Design</h3>
+                  </a>
+                  <h4 class="total-course font-normal  text-white">18 Courses</h4>
+                </div>
+                <div class="icon-wrap">
+                  <a href="#"><i
+                      class="fa-solid fa-arrow-right text-white rounded-full text-center flex items-center justify-center"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end items 03 -->
+
+          <div class="elementor-column cursor-pointer">
+            <div class="single-cat-item text-left relative rounded-xl overflow-hidden">
+              <div class="items-image relative overflow-hidden">
+                <img class="object-cover" src="img/enrobel/MKH283.jpg" alt="enrobel">
+              </div>
+              <div class="items-cont flex items-center justify-between absolute left-0 w-full">
+                <div class="content-wrap">
+                  <a href="">
+                    <h3 class="course-cat text-white font-semibold">Business</h3>
+                  </a>
+                  <h4 class="total-course font-normal  text-white">186 Courses</h4>
+                </div>
+                <div class="icon-wrap">
+                  <a href="#"><i
+                      class="fa-solid fa-arrow-right text-white rounded-full text-center flex items-center justify-center"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end items 04 -->
+
+          <div class="elementor-column cursor-pointer">
+            <div class="single-cat-item text-left relative rounded-xl overflow-hidden">
+              <div class="items-image relative overflow-hidden">
+                <img class="object-cover" src="img/enrobel/GER467.jpg" alt="enrobel">
+              </div>
+              <div class="items-cont flex items-center justify-between absolute left-0 w-full">
+                <div class="content-wrap">
+                  <a href="">
+                    <h3 class="course-cat text-white font-semibold">Technology</h3>
+                  </a>
+                  <h4 class="total-course font-normal  text-white">30 Courses</h4>
+                </div>
+                <div class="icon-wrap">
+                  <a href="#"><i
+                      class="fa-solid fa-arrow-right text-white rounded-full text-center flex items-center justify-center"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end items 05 -->
+
+          <div class="elementor-column cursor-pointer">
+            <div class="single-cat-item text-left relative rounded-xl overflow-hidden">
+              <div class="items-image relative overflow-hidden">
+                <img class="object-cover" src="img/enrobel/BBQ940.jpg" alt="enrobel">
+              </div>
+              <div class="items-cont flex items-center justify-between absolute left-0 w-full">
+                <div class="content-wrap">
+                  <a href="">
+                    <h3 class="course-cat text-white font-semibold">Cooking/Recipe</h3>
+                  </a>
+                  <h4 class="total-course font-normal  text-white">78 Courses</h4>
+                </div>
+                <div class="icon-wrap">
+                  <a href="#"><i
+                      class="fa-solid fa-arrow-right text-white rounded-full text-center flex items-center justify-center"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end items 06 -->
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!--===   Featured topics sections ==== -->
+    <section class="Featured" id="featured">
+      <div class="container mx-auto">
+
+        <div class="accseor">
+          <div class="elementor-widget-container">
+            <div class="tpc-double_heading">
+              <h3 class="dbl__title-wrapper">
+                <span class="shape-bg ">
+                  <span style="background: #ffd24d;" class="shape__bg"></span>
+                </span>
+                <span class="dbl__title dbl-title_1">Featured topics by category</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="elementor-container grid gap-4 grid-cols-5">
+          <div class="cat-carousel-single">
+            <div class="cat-carousel-box">
+              <div class="cat-carousel-shape-1"></div>
+              <div class="cat-carousel-box-icon">
+                <a href="#">
+                  <div class="cat-carousel-image">
+                    <img src="img/icons/tc.png" alt="">
+                  </div>
+                </a>
+              </div>
+              <div class="cat-carousel-shape-2">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74" height="72" viewBox="0 0 74 72">
+                  <image class="cat-carousel_id" data-name="Dot" width="74" height="72" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABICAYAAABRGGN6AAADVklEQVR4nO2cT0gUcRTHP7MKKbsSUZD0jwKzgsAO6ylBPURZBIFk1CUDO3SL8iJBRBFdOhZ7SAiCNOtW9NdAO+eloLK0iIxORVmKhyDjxVuYloJXvLnU+5x+y+j37X5mZlnmy0yyoKn7MHAGeAPsBF7gxwrgFrAOOA2cdMwWjgPHgOfAduCtY3YjcANYBfRVVddvGgFqgMVAAtx2HNYL7AaqgDbgLPDVKTsP3AOqgaXALDDilC2cADo0vy0HTKY2jjsOqsyTvT3nmD1XcQRl+d4nxdY24CDwGrjkPGwQmAc2ABeBb47ZktUKHACeAVccs4WSHqWrgQvyHeWc/2+S+98FWAlRRkKUkRBlJEQZCVFGQpSREGUkRBkJUUZClJEQZSREGQlRRkKUkRBlJEQZKYtaCyzKaEadtjBJBtmJZtdlkI06ETc/RJW0opoCWpwHNWnuuF4/92ZQs6d0lictmituSiKqR8Ol/tnnPKwLWKjrPUDBMbugmeiMLsds1EVe1z25ii7MsxcTRrWFEcaAGcfsGc1EZ4w6ZlPpRVoYKT93aFP80HkYeko0arHqKQo9qjr09HjknC00a1N8M+oqI/HzwEiIMhKijIQoIyHKSIgyEqKMhCgjIcpIiDISooyEKCMhykiIMhKijIQoIyHKSE7vg+nUy55Z0KT3w3gWC2UKmu3dwJRpVjc1covHdWCLbpAm45rjIMm9q/3bWAY7QwqAopYLW4Fhx2zZAVd1PSxHVHtqY/tv/ulvaU0Vn8UM6qqirhO9e8uTn7yIqH59ITfIDDgPk6NzWtdDGdRVQ7qeTu19LwbUidBfbmGkNn4PfHQehtbdy7RSmjf8/Z+QaBX2DviSwXuXSn0JMBF1lZH4eWAkRBkJUUZClJEQZSREGQlRRkKUkRBlJEQZCVFGQpSREGUkRBkJUUZClJEQZUQe3bYcOKoPlHrsfLlWLtXu1XZHHuT1yfn9rwGOAPXAE+dsOYj2A7vkUrDUVXeAjbpRbpI57zhMJF3WdbfuDK+nkskHeQCs1NeJczlyCDin604Z1pDauN5xUGWePEGx1jG7VjN/NcuDdF6DnHqz2om9AuRRkx8ch01oCSptxingvmO2PH1RviY2A0/1FPzsmP9SS9U80PcdBGKEEIjLcAoAAAAASUVORK5CYII="></image>
+                </svg>
+              </div>
+
+            </div>
+            <div class="cat-carousel-box-content text-center">
+              <h4 class="cat-carousel-title">
+                <a href="#">
+                  Food & Recipe                                                             </a>
+              </h4>
+            </div>
+          </div>  <!-- end items 01 -->
+ 
+          <div class="cat-carousel-single">
+            <div class="cat-carousel-box">
+              <div class="cat-carousel-shape-1"></div>
+              <div class="cat-carousel-box-icon">
+                <a href="#">
+                  <div class="cat-carousel-image">
+                    <img src="img/icons/enginer.png" alt="">
+                  </div>
+                </a>
+              </div>
+              <div class="cat-carousel-shape-2">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74" height="72" viewBox="0 0 74 72">
+                  <image class="cat-carousel_id" data-name="Dot" width="74" height="72" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABICAYAAABRGGN6AAADVklEQVR4nO2cT0gUcRTHP7MKKbsSUZD0jwKzgsAO6ylBPURZBIFk1CUDO3SL8iJBRBFdOhZ7SAiCNOtW9NdAO+eloLK0iIxORVmKhyDjxVuYloJXvLnU+5x+y+j37X5mZlnmy0yyoKn7MHAGeAPsBF7gxwrgFrAOOA2cdMwWjgPHgOfAduCtY3YjcANYBfRVVddvGgFqgMVAAtx2HNYL7AaqgDbgLPDVKTsP3AOqgaXALDDilC2cADo0vy0HTKY2jjsOqsyTvT3nmD1XcQRl+d4nxdY24CDwGrjkPGwQmAc2ABeBb47ZktUKHACeAVccs4WSHqWrgQvyHeWc/2+S+98FWAlRRkKUkRBlJEQZCVFGQpSREGUkRBkJUUZClJEQZSREGQlRRkKUkRBlJEQZKYtaCyzKaEadtjBJBtmJZtdlkI06ETc/RJW0opoCWpwHNWnuuF4/92ZQs6d0lictmituSiKqR8Ol/tnnPKwLWKjrPUDBMbugmeiMLsds1EVe1z25ii7MsxcTRrWFEcaAGcfsGc1EZ4w6ZlPpRVoYKT93aFP80HkYeko0arHqKQo9qjr09HjknC00a1N8M+oqI/HzwEiIMhKijIQoIyHKSIgyEqKMhCgjIcpIiDISooyEKCMhykiIMhKijIQoIyHKSE7vg+nUy55Z0KT3w3gWC2UKmu3dwJRpVjc1covHdWCLbpAm45rjIMm9q/3bWAY7QwqAopYLW4Fhx2zZAVd1PSxHVHtqY/tv/ulvaU0Vn8UM6qqirhO9e8uTn7yIqH59ITfIDDgPk6NzWtdDGdRVQ7qeTu19LwbUidBfbmGkNn4PfHQehtbdy7RSmjf8/Z+QaBX2DviSwXuXSn0JMBF1lZH4eWAkRBkJUUZClJEQZSREGQlRRkKUkRBlJEQZCVFGQpSREGUkRBkJUUZClJEQZUQe3bYcOKoPlHrsfLlWLtXu1XZHHuT1yfn9rwGOAPXAE+dsOYj2A7vkUrDUVXeAjbpRbpI57zhMJF3WdbfuDK+nkskHeQCs1NeJczlyCDin604Z1pDauN5xUGWePEGx1jG7VjN/NcuDdF6DnHqz2om9AuRRkx8ch01oCSptxingvmO2PH1RviY2A0/1FPzsmP9SS9U80PcdBGKEEIjLcAoAAAAASUVORK5CYII="></image>
+                </svg>
+              </div>
+
+            </div>
+            <div class="cat-carousel-box-content text-center">
+              <h4 class="cat-carousel-title">
+                <a href="#">
+                 
+                  Engineering                                                                                                                     </a>
+              </h4>
+            </div>
+          </div>  <!-- end items 02 -->
+
+          <div class="cat-carousel-single">
+            <div class="cat-carousel-box">
+              <div class="cat-carousel-shape-1"></div>
+              <div class="cat-carousel-box-icon">
+                <a href="#">
+                  <div class="cat-carousel-image">
+                    <img src="img/icons/mbl.png" alt="">
+                  </div>
+                </a>
+              </div>
+              <div class="cat-carousel-shape-2">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74" height="72" viewBox="0 0 74 72">
+                  <image class="cat-carousel_id" data-name="Dot" width="74" height="72" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABICAYAAABRGGN6AAADVklEQVR4nO2cT0gUcRTHP7MKKbsSUZD0jwKzgsAO6ylBPURZBIFk1CUDO3SL8iJBRBFdOhZ7SAiCNOtW9NdAO+eloLK0iIxORVmKhyDjxVuYloJXvLnU+5x+y+j37X5mZlnmy0yyoKn7MHAGeAPsBF7gxwrgFrAOOA2cdMwWjgPHgOfAduCtY3YjcANYBfRVVddvGgFqgMVAAtx2HNYL7AaqgDbgLPDVKTsP3AOqgaXALDDilC2cADo0vy0HTKY2jjsOqsyTvT3nmD1XcQRl+d4nxdY24CDwGrjkPGwQmAc2ABeBb47ZktUKHACeAVccs4WSHqWrgQvyHeWc/2+S+98FWAlRRkKUkRBlJEQZCVFGQpSREGUkRBkJUUZClJEQZSREGQlRRkKUkRBlJEQZKYtaCyzKaEadtjBJBtmJZtdlkI06ETc/RJW0opoCWpwHNWnuuF4/92ZQs6d0lictmituSiKqR8Ol/tnnPKwLWKjrPUDBMbugmeiMLsds1EVe1z25ii7MsxcTRrWFEcaAGcfsGc1EZ4w6ZlPpRVoYKT93aFP80HkYeko0arHqKQo9qjr09HjknC00a1N8M+oqI/HzwEiIMhKijIQoIyHKSIgyEqKMhCgjIcpIiDISooyEKCMhykiIMhKijIQoIyHKSE7vg+nUy55Z0KT3w3gWC2UKmu3dwJRpVjc1covHdWCLbpAm45rjIMm9q/3bWAY7QwqAopYLW4Fhx2zZAVd1PSxHVHtqY/tv/ulvaU0Vn8UM6qqirhO9e8uTn7yIqH59ITfIDDgPk6NzWtdDGdRVQ7qeTu19LwbUidBfbmGkNn4PfHQehtbdy7RSmjf8/Z+QaBX2DviSwXuXSn0JMBF1lZH4eWAkRBkJUUZClJEQZSREGQlRRkKUkRBlJEQZCVFGQpSREGUkRBkJUUZClJEQZUQe3bYcOKoPlHrsfLlWLtXu1XZHHuT1yfn9rwGOAPXAE+dsOYj2A7vkUrDUVXeAjbpRbpI57zhMJF3WdbfuDK+nkskHeQCs1NeJczlyCDin604Z1pDauN5xUGWePEGx1jG7VjN/NcuDdF6DnHqz2om9AuRRkx8ch01oCSptxingvmO2PH1RviY2A0/1FPzsmP9SS9U80PcdBGKEEIjLcAoAAAAASUVORK5CYII="></image>
+                </svg>
+              </div>
+
+            </div>
+            <div class="cat-carousel-box-content text-center">
+              <h4 class="cat-carousel-title">
+                <a href="#">
+                
+                  Technology                                                                                                                 </a>
+              </h4>
+            </div>
+          </div>  <!-- end items 03 -->
+
+          <div class="cat-carousel-single">
+            <div class="cat-carousel-box">
+              <div class="cat-carousel-shape-1"></div>
+              <div class="cat-carousel-box-icon">
+                <a href="#">
+                  <div class="cat-carousel-image">
+                    <img src="img/icons/reacjet.png" alt="">
+                  </div>
+                </a>
+              </div>
+              <div class="cat-carousel-shape-2">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74" height="72" viewBox="0 0 74 72">
+                  <image class="cat-carousel_id" data-name="Dot" width="74" height="72" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABICAYAAABRGGN6AAADVklEQVR4nO2cT0gUcRTHP7MKKbsSUZD0jwKzgsAO6ylBPURZBIFk1CUDO3SL8iJBRBFdOhZ7SAiCNOtW9NdAO+eloLK0iIxORVmKhyDjxVuYloJXvLnU+5x+y+j37X5mZlnmy0yyoKn7MHAGeAPsBF7gxwrgFrAOOA2cdMwWjgPHgOfAduCtY3YjcANYBfRVVddvGgFqgMVAAtx2HNYL7AaqgDbgLPDVKTsP3AOqgaXALDDilC2cADo0vy0HTKY2jjsOqsyTvT3nmD1XcQRl+d4nxdY24CDwGrjkPGwQmAc2ABeBb47ZktUKHACeAVccs4WSHqWrgQvyHeWc/2+S+98FWAlRRkKUkRBlJEQZCVFGQpSREGUkRBkJUUZClJEQZSREGQlRRkKUkRBlJEQZKYtaCyzKaEadtjBJBtmJZtdlkI06ETc/RJW0opoCWpwHNWnuuF4/92ZQs6d0lictmituSiKqR8Ol/tnnPKwLWKjrPUDBMbugmeiMLsds1EVe1z25ii7MsxcTRrWFEcaAGcfsGc1EZ4w6ZlPpRVoYKT93aFP80HkYeko0arHqKQo9qjr09HjknC00a1N8M+oqI/HzwEiIMhKijIQoIyHKSIgyEqKMhCgjIcpIiDISooyEKCMhykiIMhKijIQoIyHKSE7vg+nUy55Z0KT3w3gWC2UKmu3dwJRpVjc1covHdWCLbpAm45rjIMm9q/3bWAY7QwqAopYLW4Fhx2zZAVd1PSxHVHtqY/tv/ulvaU0Vn8UM6qqirhO9e8uTn7yIqH59ITfIDDgPk6NzWtdDGdRVQ7qeTu19LwbUidBfbmGkNn4PfHQehtbdy7RSmjf8/Z+QaBX2DviSwXuXSn0JMBF1lZH4eWAkRBkJUUZClJEQZSREGQlRRkKUkRBlJEQZCVFGQpSREGUkRBkJUUZClJEQZUQe3bYcOKoPlHrsfLlWLtXu1XZHHuT1yfn9rwGOAPXAE+dsOYj2A7vkUrDUVXeAjbpRbpI57zhMJF3WdbfuDK+nkskHeQCs1NeJczlyCDin604Z1pDauN5xUGWePEGx1jG7VjN/NcuDdF6DnHqz2om9AuRRkx8ch01oCSptxingvmO2PH1RviY2A0/1FPzsmP9SS9U80PcdBGKEEIjLcAoAAAAASUVORK5CYII="></image>
+                </svg>
+              </div>
+
+            </div>
+            <div class="cat-carousel-box-content text-center">
+              <h4 class="cat-carousel-title">
+                <a href="#">
+                
+                
+                  Data Science                                                                                                                                                                          </a>
+              </h4>
+            </div>
+          </div>  <!-- end items 04 -->
+
+          <div class="cat-carousel-single">
+            <div class="cat-carousel-box">
+              <div class="cat-carousel-shape-1"></div>
+              <div class="cat-carousel-box-icon">
+                <a href="#">
+                  <div class="cat-carousel-image">
+                    <img src="img/icons/bussice.png" alt="">
+                  </div>
+                </a>
+              </div>
+              <div class="cat-carousel-shape-2">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74" height="72" viewBox="0 0 74 72">
+                  <image class="cat-carousel_id" data-name="Dot" width="74" height="72" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABICAYAAABRGGN6AAADVklEQVR4nO2cT0gUcRTHP7MKKbsSUZD0jwKzgsAO6ylBPURZBIFk1CUDO3SL8iJBRBFdOhZ7SAiCNOtW9NdAO+eloLK0iIxORVmKhyDjxVuYloJXvLnU+5x+y+j37X5mZlnmy0yyoKn7MHAGeAPsBF7gxwrgFrAOOA2cdMwWjgPHgOfAduCtY3YjcANYBfRVVddvGgFqgMVAAtx2HNYL7AaqgDbgLPDVKTsP3AOqgaXALDDilC2cADo0vy0HTKY2jjsOqsyTvT3nmD1XcQRl+d4nxdY24CDwGrjkPGwQmAc2ABeBb47ZktUKHACeAVccs4WSHqWrgQvyHeWc/2+S+98FWAlRRkKUkRBlJEQZCVFGQpSREGUkRBkJUUZClJEQZSREGQlRRkKUkRBlJEQZKYtaCyzKaEadtjBJBtmJZtdlkI06ETc/RJW0opoCWpwHNWnuuF4/92ZQs6d0lictmituSiKqR8Ol/tnnPKwLWKjrPUDBMbugmeiMLsds1EVe1z25ii7MsxcTRrWFEcaAGcfsGc1EZ4w6ZlPpRVoYKT93aFP80HkYeko0arHqKQo9qjr09HjknC00a1N8M+oqI/HzwEiIMhKijIQoIyHKSIgyEqKMhCgjIcpIiDISooyEKCMhykiIMhKijIQoIyHKSE7vg+nUy55Z0KT3w3gWC2UKmu3dwJRpVjc1covHdWCLbpAm45rjIMm9q/3bWAY7QwqAopYLW4Fhx2zZAVd1PSxHVHtqY/tv/ulvaU0Vn8UM6qqirhO9e8uTn7yIqH59ITfIDDgPk6NzWtdDGdRVQ7qeTu19LwbUidBfbmGkNn4PfHQehtbdy7RSmjf8/Z+QaBX2DviSwXuXSn0JMBF1lZH4eWAkRBkJUUZClJEQZSREGQlRRkKUkRBlJEQZCVFGQpSREGUkRBkJUUZClJEQZUQe3bYcOKoPlHrsfLlWLtXu1XZHHuT1yfn9rwGOAPXAE+dsOYj2A7vkUrDUVXeAjbpRbpI57zhMJF3WdbfuDK+nkskHeQCs1NeJczlyCDin604Z1pDauN5xUGWePEGx1jG7VjN/NcuDdF6DnHqz2om9AuRRkx8ch01oCSptxingvmO2PH1RviY2A0/1FPzsmP9SS9U80PcdBGKEEIjLcAoAAAAASUVORK5CYII="></image>
+                </svg>
+              </div>
+
+            </div>
+            <div class="cat-carousel-box-content text-center">
+              <h4 class="cat-carousel-title">
+                <a href="#">
+                
+               
+                  Business                                                                                                                                                                         </a>
+              </h4>
+            </div>
+          </div>  <!-- end items 05 -->
+
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!--===   Our client sections ==== -->
+    <section class="client" id="clients">
+      <div class="elementor-container container mx-auto">
+        <div class="elementor-widget-container mb-11">
+          <div class="tpc-double-heading">
+            <h3 class="dbl-title-wrapper text-center">
+              <span class="dbl-title-1">We collaborate with </span>
+              <span class="dbl-title-2">200+ </span>
+              <span class="dbl-title-3">Leading universities & companies</span>
+            </h3>
+          </div>
+        </div>
+
+        <div class="elementor-image grid grid-cols-5 gap-0 w-8/12 mx-auto mt-20">
+          <div class="client-image-1">
+            <img src="img/icons/CO02.png" alt="">
+          </div>
+          <div class="client-image-1">
+            <img src="img/icons/CO913.png" alt="">
+          </div>
+          <div class="client-image-1">
+            <img src="img/icons/CO932.png" alt="">
+          </div>
+          <div class="client-image-1">
+            <img src="img/icons/COP02.png" alt="">
+          </div>
+          <div class="client-image-1">
+            <img src="img/icons/ICE32.png" alt="">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+     <!--===   Testimonials sections ==== -->
+     <section class="Testimonials container mx-auto" id="testimonials">
+      <div class="lmsmart-dubble-feedback relative">
+          <div class="feedback-author w-4/12">
+            <div class="feedback-author-wrapper">
+              <div class="feedback-quote">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42px" height="37px">
+                  <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M42.000,26.804 C42.000,32.435 37.524,36.999 32.002,36.999 C26.480,36.999 22.004,32.435 22.004,26.804 C22.004,26.799 22.005,26.796 22.005,26.791 C21.993,26.493 21.405,10.252 31.749,2.508 C41.077,-4.476 31.014,4.009 28.764,17.167 C29.781,16.811 30.867,16.610 32.002,16.610 C37.524,16.610 42.000,21.174 42.000,26.804 ZM10.007,36.999 C4.485,36.999 0.009,32.435 0.009,26.804 C0.009,26.799 0.010,26.796 0.010,26.791 C-0.002,26.493 -0.590,10.252 9.753,2.508 C19.081,-4.476 9.019,4.009 6.769,17.167 C7.786,16.811 8.872,16.610 10.007,16.610 C15.529,16.610 20.005,21.174 20.005,26.804 C20.005,32.435 15.529,36.999 10.007,36.999 Z"></path>
+                  </svg>
+              </div>
+              <div class="author-images-wrapper">
+                <div class="lmsmart-carousel">
+                  <img class="rounded-full" src="img/JON972.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feedback-content">
+            <div class="single-feedback-content">
+              <p class="feedback-text">
+                I believe in lifelong learning and they are a great place to learn from experts. I have learned a lot and recommend it. World-class training and development programs developed
+              </p>
+              <div class="quotes-name-degree-wrap">
+                <p class="feedback-name">John Dowson</p>
+                <p class="feedback-degree">Developer</p>
+              </div>
+            </div>
+          </div>
+
+      </div>
+     </section>
+
+
+       <!--=== news & article sections ==== -->
+       <section class="news" id="news">
+        <div class="container mx-auto">
+
+          <div class="accseor">
+            <div class="elementor-widget-container">
+              <div class="tpc-double_heading">
+                <h3 class="dbl__title-wrapper">
+                  <span class="shape-bg ">
+                    <span style="background: #ffd24d;" class="shape__bg"></span>
+                  </span>
+                  <span class="dbl__title dbl-title_1">Get from our news & article</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="blogs-post grid grid-cols-3 gap-4">
+
+            <div class="item">
+              <div class="blog-post format-standard-image">
+                <div class="blog-post-wrapper">
+                  <span class="post-categories">
+                    <span><a href="#">Lifestyle</a></span>
+                  </span>
+                  <div class="blog-post-media">
+                    <div class="blog-post-media-part">
+                      <a href="#" class="image-overlay">
+                        <img src="img/blogs/01.jpeg" alt="blogs">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="blog-post-content">
+                    <div class="post-meta-wrap">
+                      <div class="meta-data">
+                        <span class="post-author"> <i class="fa-solid fa-user"></i>
+                        <span><a class="post-author-name" href="#">Fred Hyman</a></span>
+                      </span>
+                      <span class="comments-post">
+                        <i class="fa-solid fa-message"></i> <a class="comments" href="#">5 Comments</a>
+                      </span>
+                      </div>
+                    </div>
+                    <h3 class="blog-post-title">
+                      <a href="#">Thoughts for Educators On School Reopening</a>
+                    </h3>
+                    <div class="blog-post-text">
+                      In order to write the perfect blog post, you need to break your content up into paragraphs....
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  <!-- end item 01 -->
+
+            <div class="item">
+              <div class="blog-post format-standard-image">
+                <div class="blog-post-wrapper">
+                  <span class="post-categories">
+                    <span><a href="#">Lifestyle</a></span>
+                  </span>
+                  <div class="blog-post-media">
+                    <div class="blog-post-media-part">
+                      <a href="#" class="image-overlay">
+                        <img src="img/blogs/02.jpeg" alt="blogs">
+                      </a>
+                      <div class="videobox-link-wrapper">
+                        <div class="videobox-link">
+                          <svg class="videobox_icon" width="33%" height="33%" viewBox="0 0 232 232"><path d="M203,99L49,2.3c-4.5-2.7-10.2-2.2-14.5-2.2 c-17.1,0-17,13-17,16.6v199c0,2.8-0.07,16.6,17,16.6c4.3,0,10,0.4,14.5-2.2 l154-97c12.7-7.5,10.5-16.5,10.5-16.5S216,107,204,100z"></path></svg>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blog-post-content">
+                    <div class="post-meta-wrap">
+                      <div class="meta-data">
+                        <span class="post-author"> <i class="fa-solid fa-user"></i>
+                        <span><a class="post-author-name" href="#">Fred Hyman</a></span>
+                      </span>
+                      <span class="comments-post">
+                        <i class="fa-solid fa-message"></i> <a class="comments" href="#">2 Comments</a>
+                      </span>
+                      </div>
+                    </div>
+                    <h3 class="blog-post-title">
+                      <a href="#">Information About Teacher Certification</a>
+                    </h3>
+                    <div class="blog-post-text">
+                      In order to write the perfect blog post, you need to break your content up into paragraphs....
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  <!-- end item 02 -->
+
+
+            <div class="item">
+              <div class="blog-post format-standard-image">
+                <div class="blog-post-wrapper">
+                  <span class="post-categories">
+                    <span><a href="#">Lifestyle</a></span>
+                  </span>
+                  <div class="blog-post-media">
+                    <div class="blog-post-media-part">
+                      <a href="#" class="image-overlay">
+                        <img src="img/blogs/03.jpeg" alt="blogs">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="blog-post-content">
+                    <div class="post-meta-wrap">
+                      <div class="meta-data">
+                        <span class="post-author"> <i class="fa-solid fa-user"></i>
+                        <span><a class="post-author-name" href="#">Fred Hyman</a></span>
+                      </span>
+                      <span class="comments-post">
+                        <i class="fa-solid fa-message"></i> <a class="comments" href="#">8 Comments</a>
+                      </span>
+                      </div>
+                    </div>
+                    <h3 class="blog-post-title">
+                      <a href="#">We are changing the way the world learns</a>
+                    </h3>
+                    <div class="blog-post-text">
+                      In order to write the perfect blog post, you need to break your content up into paragraphs....
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  <!-- end item 03 -->
+
+           
+
+          </div>
+
+        </div>
+       </section>
+
+    
+
+
+    
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
