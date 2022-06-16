@@ -519,6 +519,7 @@ button:hover {
     z-index: 1;
     border-radius: inherit;
 }
+
 .blog-post-content {
     background: #ffffff;
     box-shadow: 0px 0px 98px 0px rgb(0 0 0 / 7%);
@@ -526,6 +527,7 @@ button:hover {
     padding: 25px;
     position: relative;
 }
+
 .post-meta-wrap {
     display: flex;
     justify-content: space-between;
@@ -533,6 +535,7 @@ button:hover {
     align-items: center;
     margin-bottom: 15px;
 }
+
 .meta-data {
     display: flex;
     justify-content: flex-start;
@@ -540,6 +543,7 @@ button:hover {
     flex-wrap: wrap;
     font-weight: 500;
 }
+
 .post-author {
     display: inline-block;
     vertical-align: middle;
@@ -549,16 +553,20 @@ button:hover {
     line-height: inherit;
     margin-right: 15px;
 }
+
 .post-author i {
     margin-right: 5px;
     color: #3bbca7;
 }
+
 .post-author-name {
     color: gray;
 }
-.post-author-name:hover{
+
+.post-author-name:hover {
     color: #3bbca7;
 }
+
 .comments-post {
     display: inline-block;
     vertical-align: middle;
@@ -568,16 +576,20 @@ button:hover {
     line-height: inherit;
     margin-right: 15px;
 }
+
 .comments-post i {
     margin-right: 5px;
     color: #3bbca7;
 }
+
 .comments {
-    color: gray; 
+    color: gray;
 }
+
 .comments:hover {
     color: #3bbca7;
 }
+
 .blog-post-title {
     display: block;
     margin-bottom: 14px;
@@ -585,6 +597,7 @@ button:hover {
     word-wrap: break-word;
     clear: both;
 }
+
 .blog-post-title a {
     font-size: 22px;
     line-height: 32px;
@@ -592,13 +605,16 @@ button:hover {
     color: #072f60;
     transition: 0.3s all;
 }
+
 .blog-post-title a:hover {
-    color:#3bbca7 ;
+    color: #3bbca7;
 }
+
 .blog-post-text {
     font-size: 16px;
     color: gray;
 }
+
 .videobox-link-wrapper {
     top: 50%;
     position: absolute;
@@ -606,6 +622,7 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .videobox-link {
     width: 56px;
     height: 56px;
@@ -618,6 +635,7 @@ button:hover {
     transition: all 0.4s;
     cursor: pointer;
 }
+
 .videobox_icon {
     display: block;
     position: absolute;
@@ -627,7 +645,78 @@ button:hover {
     transform: translate(-40%, -50%);
     transition: 0.3s;
 }
-.videobox-link:hover{
+
+.videobox-link:hover {
     background-color: #3bbca7;
     fill: white;
+}
+
+
+.st-business-bg {
+    background: #3BBCA7;
+    padding: 50px 90px 50px 90px;
+    transition: 0.5s all;
+}
+
+.business-button-wrapper a {
+    color: #1B2336;
+    padding: 16px 26px 16px 26px;
+}
+
+.elementor-heading-title {
+    margin-bottom: 30px !important;
+}
+
+.business-button-wrapper a:hover {
+    background-color: #072f60;
+    color: white;
+}
+
+.right-bg-image {
+    /* background-image: url(//img/SHP3.png); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.elementor-widget-image {
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+}
+
+/* footers section css */
+footer {
+    background-color: #F6F7F9;
+}
+
+.social-icon i {
+    background-color: #3BBCA700;
+    --icon-padding: 11px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #3BBCA7;
+    padding: 11px;
+    border-radius: 50px;
+    color: #3BBCA7;
+    transition: 0.6 ease-out;
+}
+.social-icon i:hover{
+    background-color: #3BBCA7;
+    color: white;
+}
+.elementor-icon-list-item a {
+    color: #666666;
+    font-weight: 500;
+    transition: 0.5 ease-in-out;
+}
+.elementor-icon-list-item a:hover{
+    color: #3BBCA7;
+}
+.elementor-divider-separator{
+    border-top: 1px solid #EBEBEB !important;
+}
+.elementor-divider {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
